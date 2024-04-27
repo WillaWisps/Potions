@@ -4,8 +4,8 @@ extends Sprite2D
 var is_filled: bool
 var color: Player.PlayerColor
 
-const empty_texture = preload("res://empty.png")
-const blue_filled_texture = preload("res://B Potion.png")
+const empty_texture = preload("res://Images/empty.png")
+const blue_filled_texture = preload("res://Images/B Potion.png")
 
 func _init(player_color: Player.PlayerColor = Player.PlayerColor.BLUE):
 	setup(player_color)

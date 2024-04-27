@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bult3minkcpbj"]
 
-[ext_resource type="Texture2D" uid="uid://c41odfjqc330j" path="res://B Potion.png" id="1_lvxes"]
+[ext_resource type="Texture2D" uid="uid://c41odfjqc330j" path="res://Images/B Potion.png" id="1_lvxes"]
 [ext_resource type="Script" path="res://potion.gd" id="2_nnh0h"]
 
 [node name="Potion" type="Sprite2D"]
-position = Vector2(341, 456)
-scale = Vector2(1.11163, 1.02475)
+position = Vector2(320, 501)
+scale = Vector2(0.763, 0.703)
 texture = ExtResource("1_lvxes")
 script = ExtResource("2_nnh0h")
 
