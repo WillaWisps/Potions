@@ -13,7 +13,8 @@ config_version=5
 config/name="Potions"
 run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/image="res://Images/chest.png"
+config/icon="res://Images/chest.png"
 
 [rendering]
 
