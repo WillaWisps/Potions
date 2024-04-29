@@ -1,4 +1,5 @@
 class_name Ingredient
+extends Sprite2D
 
 var color: IngredientColor
 var value: int
@@ -30,8 +31,13 @@ func _init(init_color: IngredientColor, init_value: int):
 	value = init_value
 	color = init_color
 
-# -------
-
-class WhiteIngredient extends Ingredient:
-	func _init(init_value: int):
-		super(IngredientColor.WHITE, init_value)
+func get_id():
+	# Ingredient-ColorValue-Value
+	return "I-%d-%d" % [color, value]
+	
+func spawn(new_position: Vector2, parent: Node):
+	self.position = new_position
+	parent.add_child(self)
+	
+func get_pot_position_increase(seen_ingredients: Dictionary):
+	return value

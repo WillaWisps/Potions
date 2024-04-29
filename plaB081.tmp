@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://le2t2o52nfm7"]
+[gd_scene load_steps=9 format=3 uid="uid://le2t2o52nfm7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3p2om"]
 [ext_resource type="Texture2D" uid="uid://5vf47iqymneg" path="res://Images/chest.png" id="2_ktw1s"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://da04dp45w6652" path="res://Images/B Droplet.png" id="4_0lcgc"]
 [ext_resource type="Texture2D" uid="uid://dgnt1vxhukahb" path="res://Images/Ruby.png" id="5_ksr1o"]
 [ext_resource type="PackedScene" uid="uid://bult3minkcpbj" path="res://potion.tscn" id="6_yr637"]
+[ext_resource type="Texture2D" uid="uid://dqlsm56dea0nb" path="res://Images/W1.png" id="7_56gmk"]
 
 [node name="Player" type="Node"]
 script = ExtResource("1_3p2om")
@@ -29,8 +30,8 @@ scale = Vector2(0.39975, 0.39975)
 texture = ExtResource("3_0cagn")
 
 [node name="BDroplet Main" type="Sprite2D" parent="."]
-position = Vector2(564, 276)
-scale = Vector2(0.155098, 0.155098)
+position = Vector2(563, 274)
+scale = Vector2(0.159666, 0.159666)
 texture = ExtResource("4_0lcgc")
 
 [node name="BDroplet tubes" type="Sprite2D" parent="."]
@@ -45,6 +46,12 @@ texture = ExtResource("5_ksr1o")
 
 [node name="Potion" parent="." instance=ExtResource("6_yr637")]
 
+[node name="W1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(507, 221)
+scale = Vector2(0.094937, 0.094937)
+texture = ExtResource("7_56gmk")
+
 [connection signal="input_event" from="Chest/Area2D" to="." method="on_chest_click"]
-[connection signal="mouse_entered" from="Chest/Area2D" to="." method="on_mouse_entered_chest_clickable"]
+[connection signal="mouse_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_mouse_entered_clickable"]
 [connection signal="mouse_exited" from="Chest/Area2D" to="Chest/Area2D" method="_on_mouse_exited_clickable"]
